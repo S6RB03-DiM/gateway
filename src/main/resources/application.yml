@@ -1,3 +1,6 @@
+server:
+  port: 8000
+
 test:
   #  hostport: httpbin.org:80
   #  hostport: localhost:5000
