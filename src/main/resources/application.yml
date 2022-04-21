@@ -17,7 +17,6 @@ spring:
     name: gateway
   cloud:
     gateway:
-
       routes:
         - id: dinnerinmotion
           uri: lb://localhost:9000
@@ -29,7 +28,10 @@ spring:
           order: 10000
           predicates:
             - Path=/**
-
+        - id: MOCK-SERVICE
+          uri: lb://MOCK-SERVICE
+          predicates:
+            - Path=/mock/**
 logging:
   level:
     org.springframework.cloud.gateway: TRACE
