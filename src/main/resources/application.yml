@@ -32,6 +32,10 @@ spring:
           uri: lb://MOCK-SERVICE
           predicates:
             - Path=/mock/**
+        - id: EVENT-SOURCING-SERVICE
+          uri: lb://EVENT-SOURCING-SERVICE
+          predicates:
+            - Path=/events/**
 logging:
   level:
     org.springframework.cloud.gateway: TRACE
