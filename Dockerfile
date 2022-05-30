@@ -6,7 +6,7 @@ COPY pom.xml /opt/
 COPY src /opt/src/
 WORKDIR /opt
 RUN mvn -f /opt/pom.xml package
-COPY /target/*.jar /opt/app.jar
+COPY *.jar /opt/app.jar
 ENTRYPOINT exec java $JAVA_OPTS -jar app.jar
 
 #
