@@ -18,12 +18,12 @@ on:
       - main
 
 env:
-  PROJECT_ID: ${{ secrets.GKE_PROJECT }}
+  PROJECT_ID: ${{ GKE_PROJECT }}
   GAR_LOCATION: europe-central2-a
   GKE_CLUSTER: dim-cluster
   GKE_ZONE: europe-central2-a
   DEPLOYMENT_NAME: gke-gateway
-  # REPOSITORY: samples # TODO: update to Artifact Registry docker repository
+  REPOSITORY: gateway # TODO: update to Artifact Registry docker repository
   IMAGE: dinnerinmotion/gateway
 
 jobs:
@@ -47,7 +47,7 @@ jobs:
       with:
         token_format: 'access_token'
         workload_identity_provider: 'projects/123456789/locations/global/workloadIdentityPools/my-pool/providers/my-provider'
-        service_account: '${{ secrets.GKE_SA_EMAIL }}'
+        service_account: '${{ GKE_SA_EMAIL }}'
 
     # Alternative option - authentication via credentials json
     # - id: 'auth'
