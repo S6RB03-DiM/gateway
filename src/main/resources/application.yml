@@ -32,6 +32,14 @@ spring:
           uri: lb://MOCK-SERVICE
           predicates:
             - Path=/mock/**
+        - id: MOCK-CONSUMER-SERVICE
+          uri: lb://MOCK-CONSUMER-SERVICE
+          predicates:
+            - Path=/mock-consumer/**
+        - id: MOCK-PRODUCER-SERVICE
+          uri: lb://MOCK-PRODUCER-SERVICE
+          predicates:
+            - Path=/demo/**
         - id: EVENT-SOURCING-SERVICE
           uri: lb://EVENT-SOURCING-SERVICE
           predicates:
