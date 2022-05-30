@@ -5,7 +5,7 @@ FROM maven:3.6.0-jdk-11-slim AS build
 COPY pom.xml /opt/
 COPY src /opt/src/
 WORKDIR /opt
-RUN mvn -f /opt/pom.xml clean package
+RUN mvn -f /opt/pom.xml package
 COPY target/*.jar /opt/app.jar
 ENTRYPOINT exec java $JAVA_OPTS -jar app.jar
 
