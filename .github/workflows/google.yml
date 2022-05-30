@@ -19,7 +19,7 @@ on:
       - pipeline-test
 
 env:
-  PROJECT_ID: test # ${{ secrets.GKE_PROJECT }}
+  PROJECT_ID: ${{ secrets.GKE_PROJECT }}
   GAR_LOCATION: europe-central2-a
   GKE_CLUSTER: dim-cluster
   GKE_ZONE: europe-central2-a
