@@ -25,7 +25,7 @@ env:
   GKE_ZONE: europe-central2-a
   DEPLOYMENT_NAME: gke-gateway
   REPOSITORY: gateway # TODO: update to Artifact Registry docker repository
-  IMAGE: dinnerinmotion/gateway
+  IMAGE: gateway
 
 jobs:
   setup-build-publish-deploy:
