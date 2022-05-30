@@ -1,0 +1,4 @@
+commonLabels:
+  app: dim-gateway
+resources:
+  - deployment.yaml
